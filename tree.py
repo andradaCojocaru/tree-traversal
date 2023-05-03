@@ -107,6 +107,6 @@ def test_find_nonexistent_data():
     tree = Tree()
     tree.add(5)
     tree.add(3)
-    tree.add(8)
+    tree.add(9)
     node = tree._find(7, tree.root)
     assert node is None
