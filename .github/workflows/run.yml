@@ -36,7 +36,7 @@ jobs:
       run: |
         pytest tree.py
         test_status=$?
-        if [ $test_status -ne 0 ]; then
+        if always; then
           curl -X POST -H "Content-Type: application/json" -d '{"content": "Unit tests failed!"}' ${{ env.DISCORD_WEBHOOK }}
           exit 1
         fi
