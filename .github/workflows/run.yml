@@ -34,5 +34,4 @@ jobs:
         flake8 . --count --exit-zero --max-complexity=10 --max-line-length=127 --statistics
     - name: Test with pytest
       run: |
-        pytest tree.py::test_find_existing_data
-        pytest tree.py::test_find_nonexistent_data
+        pytest tree.py
